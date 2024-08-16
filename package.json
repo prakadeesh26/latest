@@ -1,0 +1,20 @@
+{
+  "name": "latest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+    "scripts": {
+      "test": "npx cucumber-js --require-module ts-node/register --require tests/steps/**/*.ts tests/features/**/*.feature"
+    },
+
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cucumber/cucumber": "^10.9.0",
+    "@playwright/test": "^1.46.0",
+    "playwright": "^1.46.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
