@@ -3,18 +3,22 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-    "scripts": {
-      "test": "npx cucumber-js --require-module ts-node/register --require tests/steps/**/*.ts tests/features/**/*.feature"
-    },
-
+  "scripts": {
+    "test": "npx cucumber-js --require-module ts-node/register --require tests/steps/**/*.ts tests/features/**/*.feature",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@cucumber/cucumber": "^10.9.0",
-    "@playwright/test": "^1.46.0",
     "playwright": "^1.46.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.46.0",
+    "allure-playwright": "^3.0.0-beta.10"
   }
 }

@@ -1,0 +1,14 @@
+{
+  "user": {
+    "username": "australia@gmail.com",
+    "password": "Australia@123"
+  },
+  "address": {
+    "street": "123 George St",
+    "city": "Sydney",
+    "postcode": "2000",
+    "country": "Australia",
+    "region": "New South Wales",
+    "telephone": "0298765432"
+  }
+}
