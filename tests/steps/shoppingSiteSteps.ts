@@ -79,8 +79,11 @@ When("The user navigate to the shipping page", async () => {
   );
 });
 
-Then("The user should verify the products {string}, {string} and {string} then complete the order", async (product1: string, product2: string, product3: string) => {
-  verifyOrderPage = new VerifyOrderPage(page);
-  await verifyOrderPage.verifyOrderSummary(product1, product2, product3);
-  await verifyOrderPage.verifyAndCompleteOrder();
-});
+Then(
+  "The user should verify the products {string}, {string} and {string} then complete the order",
+  async (product1: string, product2: string, product3: string) => {
+    verifyOrderPage = new VerifyOrderPage(page);
+    await verifyOrderPage.verifyOrderSummary(product1, product2, product3);
+    await verifyOrderPage.verifyAndCompleteOrder();
+  }
+);
