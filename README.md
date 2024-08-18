@@ -1,4 +1,4 @@
-Playwright TypeScript BDD-Cucumber Test Automation Framework
+# Playwright TypeScript BDD-Cucumber Test Automation Framework
 
 This E2E BDD Test Automation Framework in TypeScript is using (Playwright and BDD-cucumber).
 Languages: TypeScript
@@ -7,7 +7,7 @@ Testing Frameworks: Playwright
 BDD Library: Cucumber
 Reporting: cucumber-html-reporter
 
-Pre-requisites:
+### Pre-requisites:
 Install latest Node.JS
 Install latest Visual Studio Code
 Setup Project
@@ -20,12 +20,12 @@ Run npm run npm test to run the test
 The HTML report generates automatically and stores in test-results/cucumber-report.html
 Run open test-results/cucumber-report.html to open the report
 
-Results:
+### Results:
 cucumber-report.html
 
 The reports folders will be created under automatically after first run.
 
-Questions
+### Questions
 
 How did you decide on the structure and framework of your solution?
 
