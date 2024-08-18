@@ -1,13 +1,13 @@
-Playwright TypeScript BDD Cucumber Test Automation Framework
+Playwright TypeScript BDD-Cucumber Test Automation Framework
 
-This E2E BDD Test Automation Framework in TypeScript is using (Playwright, BDD-cucumber).
+This E2E BDD Test Automation Framework in TypeScript is using (Playwright and BDD-cucumber).
 Languages: TypeScript
 Build/Dependency Management: npm
 Testing Frameworks: Playwright
 BDD Library: Cucumber
 Reporting: cucumber-html-reporter
 
-Pre-requisites
+Pre-requisites:
 Install latest Node.JS
 Install latest Visual Studio Code
 Setup Project
@@ -20,7 +20,7 @@ Run npm run npm test to run the test
 The HTML report generates automatically and stores in test-results/cucumber-report.html
 Run open test-results/cucumber-report.html to open the report
 
-Results
+Results:
 cucumber-report.html
 
 The reports folders will be created under automatically after first run.
@@ -44,8 +44,6 @@ I won't say it is a complete framework solution because I believe quality checks
 
 3. What would you do differently if you were allocated more time?
 
-The Cypress Dashboard service is an optional web-based companion to the test runner, which provides timely, simple, and powerful insights on all your tests run briefly. I haven't enabled this feature, but it can be easily done.
-The CI integration can be easily achieved using Cypress Docker Image with any Integration tools like Jenkins, Circle CI etc. 
 
 4. What did you think of this challenge?
 
