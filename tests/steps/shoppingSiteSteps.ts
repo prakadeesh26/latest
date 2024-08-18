@@ -27,7 +27,7 @@ Before(async () => {
   data = JSON.parse(fs.readFileSync(dataPath, "utf8"));
 
   browser = await chromium.launch({
-    headless: false,
+    headless: true,
     args: ["--start-maximized"],
   });
   context = await browser.newContext({ viewport: null });
