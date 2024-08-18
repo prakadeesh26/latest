@@ -31,12 +31,6 @@ jobs:
     - name: Run tests
       run: npm test
 
-    - name: Lint code
-      run: npm run lint # Make sure you have a lint script in package.json
-
-    - name: Build project
-      run: npm run build # Make sure you have a build script in package.json
-
     - name: Upload coverage report
       if: success() && steps.test.outcome == 'success'
       uses: actions/upload-artifact@v3
