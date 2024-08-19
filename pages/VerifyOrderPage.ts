@@ -11,7 +11,7 @@ export class VerifyOrderPage {
     this.orderSummaryComponents = new orderSummaryComponents(page, '.opc-block-summary');
   }
 
-  async verifyOrderSummary(productNames:string[]) {
+  async verifyOrderSummary(productNames: string[]) {
     await this.orderSummaryComponents.openCartItems();
     await this.orderSummaryComponents.validateCartItems(productNames);
   }
