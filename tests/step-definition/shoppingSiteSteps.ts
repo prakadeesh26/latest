@@ -25,7 +25,7 @@ let data: any;
 BeforeAll(async () => {
   const launchOptions = {
     ...config.use,
-    headless: false,
+    headless: true,
     args: ["--start-maximized"],
   };
 
