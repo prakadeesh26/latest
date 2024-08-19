@@ -8,6 +8,7 @@ export class ShippingDetailsPage {
     this.page = page;
   }
 
+  // Function to add new address details
   async addAddress(
     street: string,
     city: string,
@@ -17,7 +18,7 @@ export class ShippingDetailsPage {
     telephone: string
   ) {
     await this.page.goto(
-      "https://magento.softwaretestingboard.com/checkout/#shipping"
+      "./checkout/#shipping"
     );
 
     const newAddressIcon = this.page.getByRole("button", {

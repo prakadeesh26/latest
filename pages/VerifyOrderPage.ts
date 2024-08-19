@@ -3,8 +3,7 @@ import { Page } from "playwright";
 
 export class VerifyOrderPage {
   private page: Page;
-  private orderSummaryTitle = "text=Order Summary";
-
+  private recentOrders = "#my-orders-table";
   constructor(page: Page) {
     this.page = page;
   }

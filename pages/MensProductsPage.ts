@@ -8,9 +8,12 @@ export class MensProductsPage {
     this.page = page;
   }
 
+  // Function to navigate to the products page
   async navigateToProducts() {
-    await this.page.goto("https://magento.softwaretestingboard.com/");
+    await this.page.goto("./");
   }
+
+  // Function to select the Jackets
   async selectJacket(product: string, size: string, color: string) {
     const mensIcon = this.page.getByRole("menuitem", { name: " Men" });
     const jacketsIcon = this.page.getByRole("link", { name: "Jackets" });
@@ -26,6 +29,7 @@ export class MensProductsPage {
     await this.addProductsToCart();
   }
 
+  // Function to select the Pants
   async selectPants(product: string, size: string, color: string) {
     const mensIcon = this.page.getByRole("menuitem", { name: " Men" });
     const pantsIcon = this.page.getByRole("link", {
@@ -44,6 +48,7 @@ export class MensProductsPage {
     await this.addProductsToCart();
   }
 
+  // Function to add selected products to cart
   async addProductsToCart() {
     const addToCartButton = this.page.getByRole("button", {
       name: "Add to Cart",

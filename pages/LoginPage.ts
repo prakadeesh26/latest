@@ -10,10 +10,10 @@ export class LoginPage {
   constructor(page: Page) {
     this.page = page;
   }
-
+// Function to login
   async login(username: string, password: string) {
     await this.page.goto(
-      "https://magento.softwaretestingboard.com/customer/account/login/"
+      "./customer/account/login/"
     );
     await this.page.fill(this.emailInput, username);
     await this.page.fill(this.passwordInput, password);
