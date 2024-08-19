@@ -10,5 +10,5 @@ Feature: A User logs in to the Magento shopping site to buy Mens Jackets and Pan
              When The customer navigate to the shipping page
              Then The customer should verify the products <product1>, <product2> and <product3> then complete the order
         Examples:
-                  | product1              | product1Size | product1Color | product2                    | product2Size | product2Color | product3           | product3Size | product3Color |
-                  | "Montana Wind Jacket" | "L"          | "Red"         | "Proteus Fitness Jackshirt" | "M"          | "Orange"      | "Cronus Yoga Pant" | "36"         | "Red"         |
+                  | product1              | product1Size | product1Color | product2                    | product2Size | product2Color | product3            | product3Size | product3Color |
+                  | "Montana Wind Jacket" | "L"          | "Red"         | "Proteus Fitness Jackshirt" | "M"          | "Orange"      | "Cronus Yoga Pant " | "36"         | "Red"         |
