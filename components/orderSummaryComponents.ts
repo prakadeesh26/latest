@@ -1,7 +1,7 @@
 import { Locator, Page } from "playwright";
 import { expect } from "playwright/test";
 
-export class orderSummaryComponent {
+export class orderSummaryComponents {
   orderSummaryContainer: Locator;
   cartItems: Locator;
   contentItemsList: Locator;
@@ -22,9 +22,8 @@ export class orderSummaryComponent {
   async validateCartItems(expectedItems: string[]) {
     await this.openCartItems();
     const items = await this.contentItemsList.locator("li").count();
-
     for (let i = 0; i < items; i++) {
-      const item = this.contentItemsList.locator('li:nth-child(${i + 1})');
+      const item = this.contentItemsList.locator(`li:nth-child(${i + 1})`);
       const productItem = item.locator(".product-item-name");
       const itemText = await productItem.innerText();
       expect(itemText).toBe(expectedItems[i]);

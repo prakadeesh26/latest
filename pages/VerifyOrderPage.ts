@@ -1,22 +1,19 @@
 import { expect } from "@playwright/test";
 import { Page } from "playwright";
-import { orderSummaryComponent } from "../components/orderSummaryComponents";
+import { orderSummaryComponents } from "../components/orderSummaryComponents";
 
 export class VerifyOrderPage {
   private page: Page;
   private recentOrders = "#my-orders-table";
-  private orderSummaryComponent: orderSummaryComponent;
+  private orderSummaryComponents: orderSummaryComponents;
   constructor(page: Page) {
     this.page = page;
-    this.orderSummaryComponent = new orderSummaryComponent(
-      page,
-      '.opc-block-summary'
-    );
+    this.orderSummaryComponents = new orderSummaryComponents(page, '.opc-block-summary');
   }
 
-  async verifyOrderSummary(productNames: string[]) {
-    await this.orderSummaryComponent.openCartItems();
-    await this.orderSummaryComponent.validateCartItems(productNames);
+  async verifyOrderSummary(productNames:string[]) {
+    await this.orderSummaryComponents.openCartItems();
+    await this.orderSummaryComponents.validateCartItems(productNames);
   }
 
   async verifyAndCompleteOrder() {
