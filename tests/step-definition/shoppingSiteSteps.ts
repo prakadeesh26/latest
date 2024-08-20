@@ -10,6 +10,9 @@ import { ShippingDetailsPage } from "../../pages/ShippingDetailsPage";
 import { VerifyOrderPage } from "../../pages/VerifyOrderPage";
 import { config } from "../../playwright.config";
 
+var { setDefaultTimeout } = require("@cucumber/cucumber");
+setDefaultTimeout(60 * 1000);
+
 let browser: Browser;
 let context: BrowserContext;
 let page: Page;
