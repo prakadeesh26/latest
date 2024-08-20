@@ -19,7 +19,7 @@ export class orderSummaryComponents {
     await this.orderSummary.click();
   }
 
-  async validateCartItems(expectedItems: string[]) {
+  async validateCartItems(expectedItems: string[], expectedValues: string[]) {
     await this.openCartItems();
     const items = await this.contentItemsList.locator("li").count();
     for (let i = 0; i < items; i++) {
@@ -27,6 +27,9 @@ export class orderSummaryComponents {
       const productItem = item.locator(".product-item-name");
       const itemText = await productItem.innerText();
       expect(itemText).toBe(expectedItems[i]);
+      const productPrice = item.locator(".price");
+      const itemValue = await productPrice.innerText();
+      expect(itemValue).toBe(expectedValues[i]);
     }
   }
 }

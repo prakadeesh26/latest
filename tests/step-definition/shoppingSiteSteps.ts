@@ -10,9 +10,6 @@ import { ShippingDetailsPage } from "../../pages/ShippingDetailsPage";
 import { VerifyOrderPage } from "../../pages/VerifyOrderPage";
 import { config } from "../../playwright.config";
 
-var { setDefaultTimeout } = require("@cucumber/cucumber");
-setDefaultTimeout(60 * 1000);
-
 let browser: Browser;
 let context: BrowserContext;
 let page: Page;
@@ -89,7 +86,7 @@ Then(
   "The customer should verify the products {string}, {string} and {string} then complete the order",
   async (product1: string, product2: string, product3: string) => {
     verifyOrderPage = new VerifyOrderPage(page);
-    await verifyOrderPage.verifyOrderSummary([product1, product2, product3]);
+    await verifyOrderPage.verifyOrderSummary([product1, product2, product3], ["$49.00", "$45.00", "$38.40"]);
     await verifyOrderPage.verifyAndCompleteOrder();
   }
 );
