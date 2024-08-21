@@ -1,9 +1,11 @@
-import { expect } from "@playwright/test";
+import { expect, Locator } from "@playwright/test";
 import { Page } from "playwright";
 import { orderSummaryComponents } from "../components/orderSummaryComponents";
 
 export class VerifyOrderPage {
   private page: Page;
+  private continueButton: Locator;
+  private placeOrderButton: Locator;
   private recentOrders = "#my-orders-table";
   private orderSummaryComponents: orderSummaryComponents;
   constructor(page: Page) {
@@ -17,7 +19,7 @@ export class VerifyOrderPage {
   }
 
   async verifyAndCompleteOrder() {
-    await this.page.click("button.continue");
-    await this.page.click("text=Place Order");
+    await this.continueButton.click();
+    await this.placeOrderButton.click();
   }
 }
