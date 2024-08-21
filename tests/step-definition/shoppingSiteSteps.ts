@@ -86,10 +86,10 @@ When("The customer navigate to the shipping page", async () => {
 });
 
 Then(
-  "The customer should verify the products {string}, {string} and {string} then complete the order",
-  async (product1: string, product2: string, product3: string) => {
+  "The customer should verify the products {string}, {string} and {string} with prices {string}, {string} and {string} respectively then complete the order",
+  async (product1: string, product2: string, product3: string, price1: string, price2: string, price3: string) => {
     verifyOrderPage = new VerifyOrderPage(page);
-    await verifyOrderPage.verifyOrderSummary([product1, product2, product3], ["$49.00", "$45.00", "$38.40"]);
+    await verifyOrderPage.verifyOrderSummary([product1, product2, product3], [price1, price2, price3]);
     await verifyOrderPage.verifyAndCompleteOrder();
   }
 );
